@@ -1,0 +1,183 @@
+.background-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+  }
+  .slide-container {
+    position: relative;
+    width: 100%;
+    height: 110vh;
+    overflow: hidden;
+  }
+  .container {
+    margin: 60px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  @keyframes zoomInHeading {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.2); /* Nagyobb zoom a címhez */
+    }
+    100% {
+      transform: scale(1); /* Ugyanaz a zoom a címhez */
+    }
+  }
+  
+  ul {
+    list-style: none; /* Remove the bullet points */
+    font-size: 16px;
+    padding: 0; /* Remove the padding */
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    z-index: 1;
+  }
+  ol {
+    list-style: none; /* Remove the bullet points */
+    font-size: 16px;
+    padding: 0; /* Remove the padding */
+  }
+    ol.szerverek {
+      z-index: 1;
+    }
+      ol.dokumentumok {
+        background-color: #f0f7fe;
+        margin-top: 26px;
+        margin-bottom: 100px;
+      }
+  li {
+    margin-bottom: 10px; /* Add some margin between the list items */
+  }
+
+  body {
+    font-family: Arial, sans-serif;
+    /*background-image: url('https://www.google.com/url?sa=i&url=http%3A%2F%2Fthozoo.hu%2Fsky-blue-background
+    -hd-desktop-wallpaper%2F&psig=AOvVaw1hmPWwg3Y30Izya5a4ELMf&ust=1710756831827000&source=images&cd=vfe&opi=
+    89978449&ved=0CBMQjRxqFwoTCPjSwP2H-4QDFQAAAAAdAAAAABAE');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center; */
+    height: 100vh;
+    background-image: url(photos/homalyoslogo.png);
+    background-size: cover;
+    background-color: rgb(232, 240, 252);
+    text-align: center;
+    overflow-y: auto;
+  }
+  h1 {
+    animation: zoomInHeading 3s infinite;
+    text-decoration: none;
+    color: inherit;
+  }
+  footer {
+    position: relative; /* vagy absolute */
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #f0f7fe;
+    z-index: 1000; /* Fontossági sorrend beállítása, hogy más elemek fölé kerüljön */
+    text-align: center;
+    padding: 1rem; /* Opcionális: padding hozzáadása a footerhez */
+    margin-top: 10px; /* Példaérték, változtasd meg szükség szerint */
+  }
+    footer.dokumentumok:hover {
+      opacity: 0.8;
+    } 
+
+  section {
+    flex: 1;
+    margin: 0 20px;
+  }
+
+  img.logo3 {
+    width: 300px;
+    height: auto;
+  }
+  img.kitpvp {
+    width: 100px;
+    height: auto;
+    border-style: groove;
+    border-width: 2px;
+    border-color: #bf4f30;
+    margin: 10px;
+    transition: transform 1s ease, opacity 0.3s ease;
+  }
+  img.kitpvp:hover {
+    transform: scale(8);
+  }
+
+  a {
+    text-decoration: none;
+  }
+    a.link {
+     text-decoration: none;
+     color: inherit;
+     transition: opacity 0.35s, text-shadow 0.40s;
+    }      
+    a.link:hover {
+     opacity: 0.6;
+     text-shadow: 3px 5px 10px rgba(92, 92, 92, 0.85);
+    }
+     a.dokumentumok {
+      text-decoration: none; /* Ez a tulajdonság eltávolítja az aláhúzást */
+      color: inherit; /* Ez azért kell, hogy az <a> színét örökölje a szülőelemtől */
+      color: #1f1f1f;
+      transition: opacity 0.35s, text-shadow 0.40s;
+     }
+     a.dokumentumok:hover {
+      opacity: 0.6;
+      text-shadow: 3px 5px 10px rgba(92, 92, 92, 0.85);
+     }
+      a.webshop {
+       transition: opacity 0.40s;
+       text-decoration: none; /* Ez a tulajdonság eltávolítja az aláhúzást */
+       color: inherit; /* Ez azért kell, hogy az <a> színét örökölje a szülőelemtől */
+      }
+      a.webshop:hover {
+        opacity: 0.8
+       }
+       a.mbrikszi {
+         transition: opacity 0.30s, text-shadow 0.40s;
+         text-decoration: none; /* Ez a tulajdonság eltávolítja az aláhúzást */
+         color: inherit; /* Ez azért kell, hogy az <a> színét örökölje a szülőelemtől */
+         color: black
+       }
+       a.mbrikszi:hover {
+         opacity: 0.6;
+         text-shadow: 2px 3px 5px rgba(92, 92, 92, 0.85);
+         text-decoration: underline;
+       }
+        a.email {
+          text-decoration: none;
+          color: inherit;
+          transition: opacity 0.30s, text-shadow 0.40s;
+        }
+        a.email:hover {
+          opacity: 0.6;
+          text-shadow: 2px 3px 5px rgba(92, 92, 92, 0.85);
+        }
+  
+  button.webshop {
+    background-color: #5dac53;
+    color: white;
+    border: none;
+    border-radius: 2px;
+    width: 100px;
+    height: 45px;
+    font-weight: bold;
+    transition: transform 0.7s ease, box-shadow 0.40s, text-shadow 0.40s, opacity 0.15s;             
+  }      
+  button.webshop:hover {
+    cursor: pointer;
+    box-shadow: 2px 3px 10px rgba(92, 92, 92, 0.75);
+    text-shadow: 3px 5px 10px rgba(92, 92, 92, 0.85);
+    transform: scale(1.2);
+  }
+  button.webshop:active {
+    opacity: 0.5;
+  }
