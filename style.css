@@ -1,20 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;700&display=swap');
+
 .background-container {
     position: relative;
     width: 100%;
     height: 100vh;
     overflow: hidden;
   }
-  .slide-container {
-    position: relative;
-    width: 100%;
-    height: 110vh;
-    overflow: hidden;
-  }
+.slide-container {
+  width: 100%;
+  height: 118vh;
+}
   .container {
     margin: 60px;
     display: flex;
     justify-content: space-between;
   }
+
+  .hidden {
+    opacity: 0;
+    transition: all 3s;       
+}
+
+.show {
+    opacity: 1;
+}
 
   @keyframes zoomInHeading {
     0% {
@@ -55,7 +64,7 @@
   }
 
   body {
-    font-family: Arial, sans-serif;
+    font-family: Poppins, sans-serif;
     /*background-image: url('https://www.google.com/url?sa=i&url=http%3A%2F%2Fthozoo.hu%2Fsky-blue-background
     -hd-desktop-wallpaper%2F&psig=AOvVaw1hmPWwg3Y30Izya5a4ELMf&ust=1710756831827000&source=images&cd=vfe&opi=
     89978449&ved=0CBMQjRxqFwoTCPjSwP2H-4QDFQAAAAAdAAAAABAE');
@@ -63,7 +72,7 @@
     background-size: cover;
     background-position: center; */
     height: 100vh;
-    background-image: url(homalyoslogo.png);
+    background-image: url(photos/homalyoslogo.png);
     background-size: cover;
     background-color: rgb(232, 240, 252);
     text-align: center;
@@ -101,7 +110,7 @@
   img.kitpvp {
     width: 100px;
     height: auto;
-    border-style: groove;
+    border-style: ridge;
     border-width: 2px;
     border-color: #bf4f30;
     margin: 10px;
